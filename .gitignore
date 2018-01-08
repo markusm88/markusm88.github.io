@@ -1,11 +1,12 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/tmp
-/out-tsc
+/nettbudsjett-styleguide/tmp
+/nettbudsjett-styleguide/out-tsc
 
 # dependencies
 /node_modules
+/nettbudsjett-styleguide/node_modules
 
 # IDEs and editors
 /.idea
@@ -24,17 +25,17 @@
 !.vscode/extensions.json
 
 # misc
-/.sass-cache
-/connect.lock
-/coverage
+/nettbudsjett-styleguide/.sass-cache
+/nettbudsjett-styleguide/connect.lock
+/nettbudsjett-styleguide/coverage
 /libpeerconnection.log
 npm-debug.log
 testem.log
-/typings
+/nettbudsjett-styleguide/typings
 
 # e2e
-/e2e/*.js
-/e2e/*.map
+/nettbudsjett-styleguide/e2e/*.js
+/nettbudsjett-styleguide/e2e/*.map
 
 # System Files
 .DS_Store
