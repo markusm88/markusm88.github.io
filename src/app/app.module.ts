@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { TypographyComponent } from './typography/typography.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TypographyComponent
   ],
   imports: [
     BrowserModule

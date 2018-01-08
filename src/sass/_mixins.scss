@@ -1,0 +1,38 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Text styles
+@mixin font-source($size: false, $lh: false,$color: false, $weight: false) {
+  font-family: "Montserrat", sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+  @if $color {
+    color: $color;
+  }
+  &-white {
+    color: $white;
+  }
+  /* &-secondary { color: $black-54; }
+    &-disabled { color: $black-38; } */
+}
+
+.secondary {
+  /* color: $black-54;
+    &-white {color: $white-70;} */
+}
+
+.disabled {
+  /* color: $black-38;
+    &-white {color: $white-50;} */
+}
