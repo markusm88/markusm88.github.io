@@ -1,0 +1,27 @@
+// Styleguide specific styling
+// ==========================================================================
+.sg-display-row {
+  background: linear-gradient(to left, #254f65 50%, #ffffff 50%);
+  margin-bottom: 80px;
+  &>.col {
+    padding: 130px 40px 56px;
+    h3,
+    p {
+      margin: 1.5rem 0 .2rem;
+    }
+  }
+}
+
+.divider {
+    margin: 2.5rem 0 1rem;
+}
+
+hr {
+  border-color:#59c0f4 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .sg-display-row {
+    background: none;
+  }
+}

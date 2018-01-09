@@ -1,10 +1,12 @@
 // Imports
 // ==========================================================================
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,400i");
-@import "~sass/mixins";
 @import "~sass/colors";
 @import "~sass/variables";
+@import "~sass/mixins";
 @import "node_modules/materialize-css/sass/materialize";
+// Import only for styleguide
+@import "~sass/styleguide";
 
 // Text styles
 // ==========================================================================
@@ -60,7 +62,7 @@ h6 {
   @extend .subhead;
 }
 
-body {
+p {
   @extend .body;
 }
 
@@ -81,3 +83,77 @@ hr {
   border-style: solid;
   border-color: rgba($black, 0.50);
 }
+
+
+// Buttons
+// ==========================================================================
+
+// Extend materialize and two new button styles (medium and xl)
+.btn {
+  font-family: "Montserrat", sans-serif;
+  color: $black-87;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: none;
+  margin: 0.5rem 0;
+  &.darkslateblue {
+    color: $white;
+  }
+}
+
+.btn-medium {
+  @extend .btn;
+  @extend .subhead;
+  height: $button-height * 1.2;
+  line-height: $button-height * 1.2;
+  i {
+    font-size: 1.3rem;
+  }
+}
+
+.btn-large {
+  @extend .title;
+  font-weight: 300;
+  height: $button-height * 1.5;
+  line-height: $button-height * 1.5;
+  i {
+    font-size: 1.6rem;
+  }
+}
+
+.btn-xl {
+  @extend .btn;
+  @extend .z-depth-4;
+  @extend .headline;
+  height: $button-height * 2.2;
+  line-height: $button-height * 2.2;
+  border-radius: 64px;
+  i {
+    font-size: 2.3rem;
+  }
+  &:hover {
+    @extend .z-depth-3;
+  }
+}
+
+.btn-floating {
+  &.btn-large {
+    @extend .z-depth-4;
+    &:hover {
+      @extend .z-depth-3;
+    }
+    i {
+      font-size: 2.857rem;
+    }
+  }
+  &.darkslateblue {
+    i {
+      color: $white;
+    }
+    &:hover {
+      background-color: lighten($primary-color, 5%) !important;
+    }
+  }
+}
+
+

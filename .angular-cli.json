@@ -19,10 +19,13 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "sass/styles.scss"
+        "sass/styles.scss",
+        "../node_modules/prismjs/themes/prism-okaidia.css"
       ],
       "scripts": [
-        "../node_modules/materialize-css/dist/js/materialize.min.js"
+        "../node_modules/materialize-css/dist/js/materialize.min.js",
+        "../node_modules/prismjs/prism.js",
+        "../node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

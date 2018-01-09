@@ -14,9 +14,9 @@ $error-color: color("red", "base");
 $link-color: color("light-blue", "base");
 
 $white: color("shades", "white");
-$white-70: gba($white, 0.70);
-$white-50: gba($white, 0.50);
-$white-12: gba($white, 0.12);
+$white-70: rgba($white, 0.70);
+$white-50: rgba($white, 0.50);
+$white-12: rgba($white, 0.12);
 
 $black: color("shades", "black");
 $black-87:  rgba($black, 0.87);
@@ -35,7 +35,7 @@ $black-4:   rgba($black, 0.04);
 // Shared styles
 $button-border: none !default;
 $button-background-focus: lighten($secondary-color, 4%) !default;
-$button-font-size: 1rem !default;
+$button-font-size: 14px;
 $button-icon-font-size: 1.3rem !default;
 $button-height: 40px;
 $button-padding: 0 2.5rem !default;
@@ -55,16 +55,16 @@ $button-large-icon-font-size: 2rem;
 $button-large-height: $button-height * 1.4;
 
 // Flat buttons
-$button-flat-color: #343434 !default;
-$button-flat-disabled-color: lighten(#999, 10%) !default;
+$button-flat-color: $primary-color;
+$button-flat-disabled-color: lighten($primary-color, 15%);
 
 // Floating buttons
-$button-floating-background: $secondary-color !default;
-$button-floating-background-hover: $button-floating-background !default;
-$button-floating-color: #fff !default;
-$button-floating-size: 40px !default;
-$button-floating-large-size: 56px !default;
-$button-floating-radius: 50% !default;
+$button-floating-background: $link-color;
+$button-floating-background-hover: darken($link-color, 8%);
+$button-floating-color: $primary-color;
+$button-floating-size: 56px;
+$button-floating-large-size: 88px;
+$button-floating-radius: 50%;
 
 
 // 4. Cards (card-link-color uses "orange" as default. "orange" not incl in our theme) 

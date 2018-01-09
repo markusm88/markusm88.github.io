@@ -8,6 +8,8 @@
 // Text styles
 @mixin font-source($size: false, $lh: false,$color: false, $weight: false) {
   font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   @if $size {
     font-size: $size;
   }
@@ -20,19 +22,4 @@
   @if $color {
     color: $color;
   }
-  &-white {
-    color: $white;
-  }
-  /* &-secondary { color: $black-54; }
-    &-disabled { color: $black-38; } */
-}
-
-.secondary {
-  /* color: $black-54;
-    &-white {color: $white-70;} */
-}
-
-.disabled {
-  /* color: $black-38;
-    &-white {color: $white-50;} */
 }
