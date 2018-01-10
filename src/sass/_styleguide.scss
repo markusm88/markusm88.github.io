@@ -4,7 +4,7 @@
   background: linear-gradient(to left, #254f65 50%, #ffffff 50%);
   margin-bottom: 80px;
   &>.col {
-    padding: 130px 40px 56px;
+    padding: 150px 40px 56px;
     h3,
     p {
       margin: 1.5rem 0 .2rem;
@@ -12,14 +12,27 @@
   }
 }
 
+.header-styleguide {
+  padding: 40px;
+}
+
+// MISC
 .divider {
-    margin: 2.5rem 0 1rem;
+  margin: 2.5rem 0 1rem;
 }
 
 hr {
-  border-color:#59c0f4 !important;
+  border-color: #59c0f4 !important;
 }
 
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: rgba(190, 190, 180, 0.4) !important;
+}
+code[class*="language-"], pre[class*="language-"] {
+  text-shadow: 0 1px rgba(190, 190, 180, 0.6) !important;
+}
+
+// Media Queries
 @media only screen and (max-width: 600px) {
   .sg-display-row {
     background: none;
