@@ -1,6 +1,6 @@
 // Nettbudsjett - Colors
 // ==========================================================================
-$md-darkslateblue: (
+$dark-blue: (
   "base": #254f65,
   "lighten-5": #e5eaed,
   "lighten-4": #becad1,
@@ -17,7 +17,7 @@ $md-darkslateblue: (
   "accent-4": #0084f2
 );
 
-$md-greenyblue: (
+$green: (
   "base": #5ac1ac,
   "lighten-5": #ebf8f5,
   "lighten-4": #ceece6,
@@ -34,7 +34,7 @@ $md-greenyblue: (
   "accent-4": #63ffd6
 );
 
-$md-lightblue: (
+$light-blue: (
   "base": #59c0f4,
   "lighten-5": #ebf7fe,
   "lighten-4": #cdecfc,
@@ -51,7 +51,7 @@ $md-lightblue: (
   "accent-4": #addbff
 );
 
-$md-fadedorange: (
+$red: (
   "base": #f0786e,
   "lighten-5": #fdefee,
   "lighten-4": #fbd7d4,
@@ -68,7 +68,7 @@ $md-fadedorange: (
   "accent-4": #ffb8b4
 );
 
-$md-lightmustard: (
+$yellow: (
   "base": #f4db5e,
   "lighten-5": #fefbec,
   "lighten-4": #fcf4cf,
@@ -105,11 +105,11 @@ $shades: (
 );
 
 $colors: (
-  "darkslateblue": $md-darkslateblue,
-  "light-blue": $md-lightblue,
-  "green": $md-greenyblue,
-  "yellow": $md-lightmustard,
-  "red": $md-fadedorange,
+  "dark-blue": $dark-blue,
+  "light-blue": $light-blue,
+  "green": $green,
+  "yellow": $yellow,
+  "red": $red,
   "grey": $grey,
   "shades": $shades
 );

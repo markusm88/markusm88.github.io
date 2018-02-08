@@ -1,40 +1,53 @@
 // Styleguide specific styling
 // ==========================================================================
+.header-styleguide {
+  padding: 40px 40px 32px;
+}
+
 .sg-display-row {
-  background: linear-gradient(to left, #254f65 50%, #ffffff 50%);
+  position: relative;
   margin-bottom: 80px;
+  background: linear-gradient(to left, #254f65 50%, #ffffff 50%);
+  padding: 40px 0;
+  .sg-row-title {
+    position: absolute;
+    top: 20px;
+    left: 40px !important;
+    padding: 0 !important;
+  }
   &>.col {
-    padding: 150px 40px 56px;
-    h3,
-    p {
-      margin: 1.5rem 0 .2rem;
-    }
+    padding: 160px 40px 56px;
   }
 }
 
-.header-styleguide {
-  padding: 40px;
-}
 
 // MISC
 .divider {
-  margin: 2.5rem 0 1rem;
+  margin: 2.5rem 0;
 }
 
 hr {
   border-color: #59c0f4 !important;
 }
 
-:not(pre) > code[class*="language-"], pre[class*="language-"] {
-  background: rgba(190, 190, 180, 0.4) !important;
-}
-code[class*="language-"], pre[class*="language-"] {
-  text-shadow: 0 1px rgba(190, 190, 180, 0.6) !important;
-}
+
 
 // Media Queries
 @media only screen and (max-width: 600px) {
+  //600px and down
   .sg-display-row {
     background: none;
   }
+  .sg-display-row > .col:nth-child(3){
+    padding: 40px 40px 56px;
+  }
+}
+
+@media #{$large-and-up} {
+  .container {
+    width: 85%
+  }
+}
+@media #{$extra-large-and-up} {
+  // styles for extra large screens and up
 }

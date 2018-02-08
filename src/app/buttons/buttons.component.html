@@ -1,62 +1,220 @@
-<div class="row">
-  <div class="relative">
-    <div class="col m7 absolute" style="padding: 0 40px">
-      <h1 class="display-2 uppercase">Buttons</h1>
-      <hr>
-    </div>
-  </div>
-</div>
-<!-- /Title head -->
-
 <div class="row z-depth-5 sg-display-row">
 
+  <div class="col m7 sg-row-title">
+    <h1 class="uppercase flow-text">Buttons</h1>
+    <hr>
+  </div>
+  <!-- /Title head -->
+
+  <!-- /Left col -->
   <div class="col s12 m6">
+    <p class="secondary">Buttons small</p>
     <a class="waves-effect btn light-blue">button</a>
     <a class="waves-effect btn green">button</a>
     <a class="waves-effect waves-light btn red">button</a>
     <a class="waves-effect btn yellow">button</a>
-    <a class="waves-effect waves-light btn darkslateblue">button</a>
+    <a class="waves-effect waves-light btn dark-blue">button</a>
+    <pre><code class="language-html">class="waves-effect btn [add "waves-light" on dark colors]"</code></pre>
     <div class="divider"></div>
     <!-- Default btns -->
 
+    <p class="secondary">Buttons medium</p>
     <a class="waves-effect btn light-blue btn-medium">button</a>
+    <pre><code class="language-html">class="waves-effect btn light-blue btn-medium"</code></pre>
     <div class="divider"></div>
     <!-- Medium btns -->
 
+    <p class="secondary">Buttons large</p>
     <a class="waves-effect  btn light-blue btn-large">button</a>
+    <pre><code class="language-html">class="waves-effect btn light-blue btn-large"</code></pre>
     <div class="divider"></div>
     <!-- Large btns -->
 
+    <p class="secondary">Buttons x-large</p>
     <a class="waves-effect btn light-blue btn-xl">button</a>
+    <pre><code class="language-html">class="waves-effect btn light-blue btn-xl"</code></pre>
     <div class="divider"></div>
     <!-- XLarge btns -->
 
-    <a class="btn-floating waves-effect"><i class="material-icons">add</i></a>
-    <a class="btn-floating waves-effect waves-light darkslateblue"><i class="material-icons">add</i></a>
-
-    <a class="btn-floating btn-large waves-effect"><i class="material-icons">add</i></a>
-
-    <a class="btn-floating btn-large waves-effect waves-light darkslateblue"><i class="material-icons">add</i></a>
+    <p class="secondary">Buttons Circle</p>
+    <a class="btn-floating waves-effect">
+      <i class="material-icons">add</i>
+    </a>
+    <a class="btn-floating waves-effect waves-light dark-blue">
+      <i class="material-icons">add</i>
+    </a>
+    <pre><code class="language-markup">class="btn-floating waves-effect [waves-light dark-blue]"</code></pre>
+    <div class="divider"></div>
     <!-- Floating btns -->
 
-    <pre><code class="language-markup">
-                &lt;h1 class="foo"&gt;h1. Heading 1&lt;/h1&gt;
-                &lt;h2&gt;h2. Heading 2&lt;/h2&gt;
-                &lt;h3&gt;h3. Heading 3&lt;/h3&gt;
-                &lt;h4&gt;h4. Heading 4&lt;/h4&gt;
-                &lt;h5&gt;h5. Heading 5&lt;/h5&gt;
-                &lt;h6&gt;h6. Heading 6&lt;/h6&gt;
-        </code>
-    </pre>
+    <a class="btn-floating btn-large waves-effect">
+      <i class="material-icons">add</i>
+    </a>
+    <a class="btn-floating btn-large waves-effect waves-light dark-blue">
+      <i class="material-icons">add</i>
+    </a>
+    <pre><code class="language-html">class="btn-floating btn-large waves-effect [waves-light dark-blue]"</code></pre>
+    <!-- Floating btns large -->
+
+    <div class="divider"></div>
+    <p class="secondary">Tooltips</p>
+    <a class="btn dark-blue tooltipped" data-position="top" data-delay="50"  data-tooltip="I am a tooltip">Hover me!</a>
+
+  <!-- Highlighted code -->
+  <ngx-prism language="html">
+  &lt;a class="tooltipped" data-position="top" data-delay="50"  data-tooltip="I am a tooltip"&gt;     
+    Hover me!
+  &lt;/a&gt; 
+  
+  TO-DO: Issue with multiple tooltips. Function ".open()" not working.
+  </ngx-prism>
+
+    <a href="http://next.materializecss.com/tooltips.html">http://next.materializecss.com/tooltips.html</a>
+    <!-- Tooltip -->
 
   </div>
-  <!-- /Left col -->
+  <!-- /Left col end -->
 
-  <div class="col s12 m6 darkslateblue">
-    <pre><code class="language-html">class="display-3 typo-white"</code></pre>
 
-  </div>
   <!-- /Right col -->
+  <div class="col s12 m6 dark-blue">
 
-</div>
-<!-- /Row -->
+    <!-- Dropdown Trigger -->
+    <p class="secondary-white">Drop downs</p>
+    <a class='dropdown-trigger btn-flat' href='#' data-target='dropdown1'>
+      <h1 class="white-text">September
+        <i class="large material-icons">arrow_drop_down</i>
+      </h1>
+    </a>
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+      <li>
+        <a href="#!">Januar</a>
+      </li>
+      <li>
+        <a href="#!">Februar</a>
+      </li>
+      <li>
+        <a href="#!">Mars</a>
+      </li>
+      <li>
+        <a href="#!">April</a>
+      </li>
+      <li>
+        <a href="#!">Mai</a>
+      </li>
+      <li>
+        <a href="#!">Juni</a>
+      </li>
+      <li>
+        <a href="#!">Juli</a>
+      </li>
+      <li>
+        <a href="#!">August</a>
+      </li>
+    </ul>
+
+    <br>
+    <br>
+
+    <pre><code class="language-markup">&lt;ul id="dropdown" class="drowdown-content"&gt;&lt;/ul&gt;</code></pre>
+    <p class="caption white-text">Init and options:</p>
+<ngx-prism language="javascript">
+  let elem = document.querySelector('.dropdown-trigger');
+
+  let options = &#123;
+    alignment: 'right',   // Defines the edge the menu is aligned to.
+    constrainWidth: true, // If true, constrainWidth to the size of the dropdown activator.
+    coverTrigger: true,   // If false, the dropdown will show below the trigger
+    closeOnClick: true,   // If true, close dropdown on item click.
+    hover: false,         // If true, the dropdown will open on hover.
+    inDuration: 150,      // The duration of the transition enter in milliseconds.
+    outDuration: 250,     // The duration of the transition out in milliseconds.
+    onOpenStart: null,    // Function called when dropdown starts entering.
+    onOpenEnd: null,      // Function called when dropdown finishes entering.
+    onCloseStart: null,   // Function called when dropdown starts exiting.
+    onCloseEnd: null      // Function called when dropdown finishes exiting.
+  &#125;
+
+  let instance = M.Dropdown.init(elem, options);
+
+</ngx-prism>
+<a href="http://next.materializecss.com/dropdown.html">http://next.materializecss.com/dropdown.html</a>
+    <div class="divider"></div>
+
+    <!-- Icon in containers -->
+    <p class="secondary-white">Icon buttons</p>
+    <div class="icon-container yellow">
+      <i class="material-icons">home</i>
+    </div>
+
+    <div class="icon-container">
+      <i class="material-icons">home</i>
+    </div>
+
+    <div class="icon-container-dotted">
+      <i class="material-icons">add</i>
+    </div>
+
+    <br>
+    <br>
+
+    <ngx-prism language="html">
+    &lt;div class="icon-container"&gt;
+       &lt;div class="material-icons"&gt; icon-name &lt;/i&gt;
+    &lt;/div&gt;
+        
+    Dotted border class: icon-container-dotted
+    </ngx-prism>
+
+    <div class="divider"></div>
+
+    <!-- Button - Catergory Pickers -->
+    <p class="secondary-white">Category picker</p>
+    <div class="row">
+      <div class="col s2">
+        <a class="btn-category">
+          <div class="icon-container">
+            <i class="material-icons">home</i>
+          </div>
+          <span class="body white-text">Bolig</span>
+        </a>
+      </div>
+      <div class="col s2">
+        <a class="btn-category btn-category-active">
+          <div class="icon-container">
+            <i class="material-icons">home</i>
+          </div>
+          <span class="body white-text">Bolig
+            <i>Active</i>
+          </span>
+        </a>
+      </div>
+      <div class="col s2">
+        <a class="btn-category">
+          <div class="icon-container">
+            <i class="material-icons">home</i>
+          </div>
+          <span class="body white-text">Bolig</span>
+        </a>
+      </div>
+    </div>
+    <!-- Button Row end -->
+
+
+    <ngx-prism language="html">
+    &lt;div class="btn-category"&gt; 
+      &lt;div class="icon-container"&gt;
+         &lt;i class="material-icons"&gt; icon-name &lt;/i&gt;
+      &lt;/div&gt;
+      &lt;span class="body white-text"&gt; Bolig &lt;/span&gt;
+    &lt;/div&gt; 
+    
+    Active class: btn-category btn-category-active
+    </ngx-prism>
+
+    </div>
+    <!-- /Right col end -->
+
+  </div>
+  <!-- /Row -->

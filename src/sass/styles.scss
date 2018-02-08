@@ -5,66 +5,14 @@
 @import "~sass/variables";
 @import "~sass/mixins";
 @import "node_modules/materialize-css/sass/materialize";
+// Nettbudsjett custom styles
+@import "~sass/typography";
+@import "~sass/forms";
+@import "~sass/buttons";
+@import "~sass/table";
 // Import only for styleguide
 @import "~sass/styleguide";
 
-// Text styles
-// ==========================================================================
-.display-3      { @include font-source(48px, 1.17, $black-87, 400); }
-
-.display-2      { @include font-source(40px, 1.5, $black-87, 200); }
-
-.display-1      { @include font-source(32px, 1.5, $black-87, 300); }
-
-.headline       { @include font-source(28px, 1.29, $black-87); }
-
-.title          { @include font-source(20px, 1.4, $black-87, 300); }
-
-.subhead        { @include font-source(18px, 1.56, $black-87); }
-
-.body           { @include font-source(14px, 1.71, $black-87); }
-
-.body-2         { @include font-source(14px, 1.71, $black-87, 300); }
-
-.table-content  { @include font-source(13px, 1.54, $black-87); }
-
-.caption        { @include font-source(12px, 1.33, $black-87); }
-
-.typo-white { color: $white; }
-
-.secondary {
-  color: $black-54;
-  &-white {
-    color: $white-70;
-  }
-}
-
-.disabled {
-  color: $black-38;
-  &-white {
-    color: $white-50;
-  }
-}
-
-// Standard Typography
-h1 {
-  @extend .headline;
-}
-
-h2 {
-  @extend .title;
-}
-
-h3,
-h4,
-h5,
-h6 {
-  @extend .subhead;
-}
-
-p {
-  @extend .body;
-}
 
 // Helper classes
 // ==========================================================================
@@ -84,76 +32,162 @@ hr {
   border-color: rgba($black, 0.50);
 }
 
-
-// Buttons
+// Tooltip
 // ==========================================================================
-
-// Extend materialize and two new button styles (medium and xl)
-.btn {
-  font-family: "Montserrat", sans-serif;
-  color: $black-87;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-transform: none;
-  margin: 0.5rem 0;
-  &.darkslateblue {
-    color: $white;
+.material-tooltip {
+  background: darken($color: $primary-color, $amount: 15%);
+  overflow: visible;
+  &::before {
+    content: '';
+    @include css-triangle(bottom, darken($color: $primary-color, $amount: 15%), 8px, 16px);
+    bottom: -7px;
+    right: calc(50% - 8px);
+    margin-left: -35px;
+    position: absolute;
   }
 }
 
-.btn-medium {
-  @extend .btn;
-  @extend .subhead;
-  height: $button-height * 1.2;
-  line-height: $button-height * 1.2;
-  i {
-    font-size: 1.3rem;
-  }
+// Progress Bar
+// ==========================================================================
+$eco-bar-border: $black-20;
+$eco-bar-border-on-dark-bg: $white;
+.eco-bar-container {
+  text-align: center;
 }
 
-.btn-large {
-  @extend .title;
-  font-weight: 300;
-  height: $button-height * 1.5;
-  line-height: $button-height * 1.5;
-  i {
-    font-size: 1.6rem;
-  }
+.eco-bar,
+.eco-bar-vertical {
+  @extend .progress;
+  height: 24px;
+  background-color: transparent;
+  border: 1px solid $eco-bar-border;
 }
 
-.btn-xl {
-  @extend .btn;
-  @extend .z-depth-4;
-  @extend .headline;
-  height: $button-height * 2.2;
-  line-height: $button-height * 2.2;
-  border-radius: 64px;
-  i {
-    font-size: 2.3rem;
-  }
-  &:hover {
-    @extend .z-depth-3;
-  }
-}
-
-.btn-floating {
-  &.btn-large {
-    @extend .z-depth-4;
-    &:hover {
-      @extend .z-depth-3;
+.eco-bar-vertical {
+  margin: 0 0 0.533rem 0;
+  .determinate {
+    top: auto;
+    width: 100%;
+    span {
+      top: -24px;
+      position: relative;
+      color: $success-color;
     }
-    i {
-      font-size: 2.857rem;
+    &.is-over {
+      span {
+        top: 0;
+        color: $white;
+      }
     }
   }
-  &.darkslateblue {
-    i {
-      color: $white;
-    }
-    &:hover {
-      background-color: lighten($primary-color, 5%) !important;
+}
+
+.eco-on-dark {
+  border-color: $eco-bar-border-on-dark-bg;
+  .determinate.is-over {
+    span {
+      color: $primary-color;
     }
   }
 }
 
 
+// Slider
+// ==========================================================================
+.eco-slider,
+.eco-slider-dark {
+  background: $black-20 !important;
+  .noUi-tooltip,
+  .noUi-connect,
+  .noUi-handle {
+    background-color: $slider-color !important;
+  }
+  .noUi-tooltip {
+    opacity: 0;
+    top: -11px !important;
+  }
+  .noUi-active .noUi-tooltip {
+    opacity: 1;
+    background-color: $slider-color !important;
+    &::before {
+      content: '';
+      height: 56px;
+      width: 100px;
+      background: $slider-color;
+      bottom: 0;
+      border-radius: 4px;
+      left: -24px;
+      position: absolute;
+      transform: rotate(45deg);
+    }
+    span {
+      top: -11px;
+      left: -17px;
+      font-size: 16px;
+      width: 85px;
+    }
+  }
+}
+
+.eco-slider-dark {
+  background: $white-70 !important;
+  .noUi-tooltip,
+  .noUi-connect,
+  .noUi-handle {
+    background-color: $slider-color-dark !important;
+    span {
+      color: $black-87;
+    }
+  }
+  .noUi-active .noUi-tooltip {
+    background-color: $slider-color-dark !important;
+    &::before {
+      background: $slider-color-dark;
+    }
+  }
+}
+
+
+// Modals
+// ==========================================================================
+.card-modal {
+  max-width: 680px;
+  @extend .z-depth-5;
+  .row {margin-bottom: 0; }
+  .card-header {
+    background-color: $primary-color;
+    .card-modal-header-nav-bar {
+      padding: 16px 32px;
+    }
+    .card-modal-header-category-picker {
+      padding: 0px 32px 16px;
+    }
+  }
+  .card-content {
+    padding: 24px 32px;
+  }
+  .card-action {
+    padding: 0 32px 24px;
+  }
+}
+
+
+// Costum Column Sizes
+//
+// Example - col(1, 7, 12px) will result in:
+// width: percentage(1/7); padding: 0 24px;
+// 
+// ==========================================================================
+.c5 {
+  @include col(1, 5, 12px);
+}
+
+.c7 {
+  @include col(1, 7, 12px);
+}
+
+@media #{$small-and-down} {
+  .c7 {
+    display: none;
+  }
+}

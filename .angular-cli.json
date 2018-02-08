@@ -20,12 +20,12 @@
       "prefix": "app",
       "styles": [
         "sass/styles.scss",
+        "../node_modules/materialize-css/extras/noUiSlider/nouislider.css",
         "../node_modules/prismjs/themes/prism.css"
       ],
       "scripts": [
         "../node_modules/materialize-css/dist/js/materialize.min.js",
-        "../node_modules/prismjs/prism.js",
-        "../node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.js"
+        "../node_modules/materialize-css/extras/noUiSlider/nouislider.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

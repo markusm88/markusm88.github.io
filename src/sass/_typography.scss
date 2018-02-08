@@ -1,0 +1,57 @@
+// Text styles
+// ==========================================================================
+
+.display-3      { @include font-source(48px, 1.17, $black-87, 400); }
+
+.display-2      { @include font-source(40px, 1.5, $black-87, 200); }
+
+.display-1      { @include font-source(32px, 1.5, $black-87, 300); }
+
+.headline       { @include font-source(28px, 1.29, $black-87); }
+
+.title          { @include font-source(20px, 1.4, $black-87, 300); }
+
+.subhead        { @include font-source(18px, 1.56, $black-87); }
+
+.body           { @include font-source(14px, 1.71, $black-87); }
+
+.body-2         { @include font-source(14px, 1.71, $black-87, 300); }
+
+.table-content  { @include font-source(13px, 1.54, $black-87); }
+
+.caption        { @include font-source(12px, 1.33, $black-87); }
+
+.secondary {
+  color: $black-54;
+  &-white {
+    color: $white-70;
+  }
+}
+
+.disabled {
+  color: $black-38;
+  &-white {
+    color: $white-50;
+  }
+}
+
+// Standard Typography
+h1 {
+  @extend .headline;
+}
+
+h2 {
+  @extend .title;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  @extend .subhead;
+  margin: 0;
+}
+
+p {
+  @extend .body;
+}

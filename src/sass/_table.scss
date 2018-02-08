@@ -1,0 +1,148 @@
+// Table
+// Todo: Add table for dark-bg
+// ==========================================================================
+
+// Table inputs and checkboxes
+.editable-table {
+  @extend .table-content;
+  tbody {
+    tr:hover {
+      background-color: $black-4;
+    }
+  }
+  th {
+    padding: 16px 24px;
+    box-sizing: border-box;
+    color: $black-54;
+    [type="checkbox"] + span:not(.lever) {
+      color: $black-54;
+    }
+    &:first-child {
+      padding-left: 8px;
+    }
+  }
+  td {
+    padding: 8px 8px 0;
+  }
+
+  // Input field - container of col items
+  .input-field {
+    margin: 0;
+    >label {
+      /* position: relative; */
+    }
+    .caret {z-index: 1}
+    .select-dropdown {
+      &:focus {
+        background: $white;
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+
+  // Icon inside table elements
+  .icon-in-table {
+    position: absolute;
+    top: 0.75rem;
+    right: 8px;
+    width: auto;
+    opacity: 0;
+    font-size: 1.5rem;
+    color: $black-38;
+    transition: 0.3s opacity;
+  }
+
+  // Inputs inside table
+  input:not([type]),
+  input[type="text"]:not(.browser-default),
+  input[type="password"]:not(.browser-default),
+  input[type="email"]:not(.browser-default),
+  input[type="url"]:not(.browser-default),
+  input[type="time"]:not(.browser-default),
+  input[type="date"]:not(.browser-default),
+  input[type="datetime"]:not(.browser-default),
+  input[type="datetime-local"]:not(.browser-default),
+  input[type="tel"]:not(.browser-default),
+  input[type="number"]:not(.browser-default),
+  input[type="search"]:not(.browser-default),
+  textarea.materialize-textarea {
+    padding: 0 16px;
+    border-color: transparent;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    cursor: pointer;
+    font-size: inherit; 
+    
+    // Hover input style
+    &:hover {
+      border-bottom: 1px solid $input-border-color;
+      + .icon-in-table {
+        opacity: 1;
+      }
+      &.valid {
+        border-color: $input-border-color;
+      }
+    } 
+    
+    // Valid input
+    &.valid {
+      border-bottom: 1px solid transparent;
+      box-shadow: 0 1px 0 0 transparent;
+    } 
+    
+    // Focus
+    &:focus:not([readonly]),
+    &:focus.valid {
+      position: relative;
+      top: 0;
+      left: 0;
+      padding: 0 16px;
+      background: $white;
+      transform: scale(1.2);
+      box-shadow: 0 2px 2px 0 $black-20, 0 0 2px 0 $black-12;
+      box-sizing: border-box;
+      z-index: 2000;
+    }
+    &:focus:not([readonly]) {
+      + .prefix {
+        opacity: 0;
+      }
+    }
+  } 
+  
+  // Checkbox - small
+  [type="checkbox"] + span:not(.lever) {
+    @extend .table-content;
+    padding-left: 32px;
+    /* margin-top: 4px; */
+  }
+  [type="checkbox"].filled-in {
+    
+    // Unchecked style
+    &:not(:checked) + span:not(.lever):before {
+      left: 4px;
+      top: 18px;
+    }
+    &:not(:checked) + span:not(.lever):after {
+      top: 2px;
+      left: 2px;
+      height: 16px;
+      width: 16px;
+    } 
+    
+    // Checked style
+    &:checked {
+      + span:not(.lever):before {
+        left: 2px;
+        width: 7px;
+        height: 12px;
+      }
+      + span:not(.lever):after {
+        top: 2px;
+        left: 2px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

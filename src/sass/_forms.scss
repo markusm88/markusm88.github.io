@@ -1,0 +1,189 @@
+// Input fields
+// ==========================================================================
+
+.input-field {
+  height: 56px; // Fixed height to inputfield
+
+  // Icon placement and color
+  .prefix {
+    top: 0.5rem;
+    color: $input-focus-color;
+    /* Adjusted icon color and position */
+  }
+  & > label {
+    color: $placeholder-text-color;
+    /* Missing this variable in "materialize ..._input-fields.scss" line 179 */
+  }
+}
+
+// Checkboxes
+// ==========================================================================
+// Text in checbox
+[type="checkbox"] + span:not(.lever) {
+  padding-left: 3rem;
+  color: $input-focus-color;
+  overflow: hidden;
+}
+
+// Filled in Style
+[type="checkbox"].filled-in {
+
+  // Unchecked style
+  &:not(:checked) + span:not(.lever):before {
+    left: 5px;
+    top: 26px;
+  }
+  &:not(:checked) + span:not(.lever):after {
+    left: 2px;
+    height: 24px;
+    width: 24px;
+    border: 2px solid $radio-empty-color;
+  }
+
+  // Checked style
+  &:checked {
+    + span:not(.lever):before {
+      border-right: 2px solid $input-background;
+      border-bottom: 2px solid $input-background;
+    }
+    + span:not(.lever):before {
+      left: 3px;
+      width: 10px;
+      height: 16px;
+    }
+    + span:not(.lever):after {
+      left: 2px;
+      width: 24px;
+      height: 24px;
+      border: 2px solid $radio-fill-color;
+      background-color: $radio-fill-color;
+    }
+    /* Fixed styling for checkmark in checkbox */
+  }
+}
+
+// Forms on dark background
+// ==========================================================================
+.form-on-dark-bg {
+  .input-field {
+    & > label {
+      color: $placeholder-text-color-on-dark-bg;
+    }
+    .prefix {
+      color: $input-color-form-on-dark-bg;
+    }
+  }
+  input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
+    color: $white;
+  }
+  input:not([type]),
+  input[type="text"]:not(.browser-default),
+  input[type="password"]:not(.browser-default),
+  input[type="email"]:not(.browser-default),
+  input[type="url"]:not(.browser-default),
+  input[type="time"]:not(.browser-default),
+  input[type="date"]:not(.browser-default),
+  input[type="datetime"]:not(.browser-default),
+  input[type="datetime-local"]:not(.browser-default),
+  input[type="tel"]:not(.browser-default),
+  input[type="number"]:not(.browser-default),
+  input[type="search"]:not(.browser-default),
+  textarea.materialize-textarea {
+    color: $input-text-color-form-on-dark-bg;
+
+    // Focused input style
+    &:focus:not([readonly]) {
+      border-bottom: 1px solid $input-color-form-on-dark-bg;
+      box-shadow: 0 1px 0 0 $input-color-form-on-dark-bg;
+    } 
+    
+    // Focused label style
+    &:focus:not([readonly]) + label {
+      color: $input-color-form-on-dark-bg;
+    }
+    &.valid,
+    &:focus.valid {
+      border-bottom: 1px solid $input-success-color-form-on-dark-bg;
+      box-shadow: 0 1px 0 0 $input-success-color-form-on-dark-bg;
+    }
+    &::placeholder {
+      color: $placeholder-text-color-on-dark-bg;
+    }
+  }
+  
+  // Checkbox - text
+  [type="checkbox"] + span:not(.lever) {
+    color: $input-color-form-on-dark-bg;
+  }
+  
+  // Filled in Style
+  [type="checkbox"].filled-in {
+    
+    // General
+    &:not(:checked) + span:not(.lever):after {
+      border: 2px solid $input-color-form-on-dark-bg;
+    } 
+    
+    // Checked style
+    &:checked {
+      + span:not(.lever):before {
+        border-right: 2px solid $input-background;
+        border-bottom: 2px solid $input-background;
+      }
+      + span:not(.lever):after {
+        border: 2px solid $input-color-form-on-dark-bg;
+        background-color: $input-color-form-on-dark-bg;
+      }
+    }
+  }
+
+  .select-wrapper {
+    .caret {
+      fill: $white-70;
+    }
+    input.select-dropdown {
+      border-color: $white-50;
+    }
+  }
+
+}
+
+// Datepicker
+// ==========================================================================
+.datepicker-date-display {
+  background-color: $datepicker-date-bg;
+  /* Missing this variable in "materialize ...checkbox.scss" line 114 */
+}
+
+.datepicker-clear,
+.datepicker-today,
+.datepicker-done {
+  color: $datepicker-date-bg;
+  /* Missing this variable in "materialize ...checkbox.scss" line 158,159 */
+  padding: 0 1rem !important;
+  /* Added !important to override btn class */
+}
+
+.datepicker-clear {
+  color: $error-color;
+}
+
+.datepicker-table {
+  td {
+    &.is-today {
+      color: $secondary-color;
+    }
+    &.is-selected {
+      background-color: $datepicker-selected;
+      /* Missing this variable in "materialize ...checkbox.scss" line 114 */
+    }
+  }
+}
+
+// Month & Year dropdown picker
+.datepicker-controls {
+  .dropdown-content {
+    height: 250px !important;
+    margin: 8px 0;
+  }
+}
