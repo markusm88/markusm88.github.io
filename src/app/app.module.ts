@@ -10,6 +10,7 @@ import { FormsComponent } from './forms/forms.component';
 import { TableComponent } from './table/table.component';
 import { BarsComponent } from './bars/bars.component';
 import { ModalsComponent } from './modals/modals.component';
+import { CollapsibleComponent } from './collapsible/collapsible.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ModalsComponent } from './modals/modals.component';
     FormsComponent,
     TableComponent,
     BarsComponent,
-    ModalsComponent
+    ModalsComponent,
+    CollapsibleComponent
   ],
   imports: [
     BrowserModule,

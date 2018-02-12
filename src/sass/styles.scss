@@ -29,8 +29,40 @@
 
 hr {
   border-style: solid;
-  border-color: rgba($black, 0.50);
+  border-color: rgba($black, 0.5);
 }
+
+/*
+Flexbox fix to .valing-wrapper materialize class
+Added flex-direction, and possibillity to reverse order class.
+*/
+@media #{$small-and-down} {
+  .valign-wrapper {
+    flex-direction: column;
+  }
+  .reverse-item-order-s {
+    flex-direction: column-reverse;
+  }
+}
+@media #{$medium-and-up} {
+  .reverse-item-order-m {
+    flex-direction: column-reverse;
+  }
+}
+
+
+// Grid
+// ==========================================================================
+/* Rows should only be added to wrap colums, - rows align cols to container  
+    Need MORE testing, as there already is a .col .row wrapper
+*/
+@media #{$medium-and-up} {
+  .row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
 
 // Tooltip
 // ==========================================================================
@@ -38,7 +70,7 @@ hr {
   background: darken($color: $primary-color, $amount: 15%);
   overflow: visible;
   &::before {
-    content: '';
+    content: "";
     @include css-triangle(bottom, darken($color: $primary-color, $amount: 15%), 8px, 16px);
     bottom: -7px;
     right: calc(50% - 8px);
@@ -46,6 +78,7 @@ hr {
     position: absolute;
   }
 }
+
 
 // Progress Bar
 // ==========================================================================
@@ -110,7 +143,7 @@ $eco-bar-border-on-dark-bg: $white;
     opacity: 1;
     background-color: $slider-color !important;
     &::before {
-      content: '';
+      content: "";
       height: 56px;
       width: 100px;
       background: $slider-color;
@@ -153,7 +186,9 @@ $eco-bar-border-on-dark-bg: $white;
 .card-modal {
   max-width: 680px;
   @extend .z-depth-5;
-  .row {margin-bottom: 0; }
+  .row {
+    margin-bottom: 0;
+  }
   .card-header {
     background-color: $primary-color;
     .card-modal-header-nav-bar {
@@ -172,12 +207,57 @@ $eco-bar-border-on-dark-bg: $white;
 }
 
 
-// Costum Column Sizes
-//
-// Example - col(1, 7, 12px) will result in:
-// width: percentage(1/7); padding: 0 24px;
-// 
+// Collapsible
 // ==========================================================================
+.collapsible {
+  .icon-collapsible {
+    padding: 0;
+  }
+  &.popout {
+    & > li {
+     /*  &:first-child {
+        box-shadow: 0 -2px 16px 0 rgba(0, 0, 0, 0.16),
+          0 8px 16px 0 rgba(0, 0, 0, 0.12);
+      } */
+      margin: 0;
+      box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.24);
+    }
+    & > li.active {
+      margin: 40px -24px;
+      box-shadow: 0 -2px 16px 0 rgba(0, 0, 0, 0.16),
+        0 8px 16px 0 rgba(0, 0, 0, 0.12);
+      .icon-rotate {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+.collapsible-header {
+  display: block;
+  padding: 40px 32px 24px 32px;
+  border: none;
+  .row {
+    margin-bottom: 0;
+  }
+  i {
+    width: unset;
+    margin-right: unset;
+  }
+}
+
+.collapsible-body {
+  padding: 16px 32px 56px 32px;
+}
+
+
+// Costum Column Sizes
+// ==========================================================================
+/* 
+Example - col(1, 7, 12px) will result in:
+width: percentage(1/7); padding: 0 24px;
+*/
+
 .c5 {
   @include col(1, 5, 12px);
 }

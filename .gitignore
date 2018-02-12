@@ -41,3 +41,5 @@ testem.log
 Thumbs.db
 
 dist/index\.html
+
+src/index\.html

@@ -17,9 +17,10 @@
     [type="checkbox"] + span:not(.lever) {
       color: $black-54;
     }
-    &:first-child {
-      padding-left: 8px;
-    }
+    &:first-child {}
+  }
+  th.th-checkbox {
+    padding: 16px 24px 8px 8px;
   }
   td {
     padding: 8px 8px 0;

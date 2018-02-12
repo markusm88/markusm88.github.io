@@ -5,11 +5,12 @@
     <hr>
   </div>
   <!-- /Title head -->
+
   <div class="col s12 m12">
     <table class="editable-table">
       <thead>
         <tr>
-          <th>
+          <th class="th-checkbox">
             <label>
               <input type="checkbox" class="filled-in" />
               <span class="caption secondary">Dato</span>
@@ -65,7 +66,58 @@
         </tr>
       </tbody>
     </table>
+    <br><br>
+    
+  <!-- Highlighted code -->
+  <ngx-prism language="html">
+    &lt;!--
+    On dark backgrounds: TODO
+    -->
+
+    &lt;table class="editable-table">
+      &lt;thead>
+        &lt;tr>
+          &lt;th class="th-checkbox"> &lt;!-- Add th-checkbox if checkbox in tableheader-->
+            &lt;label>
+              &lt;input type="checkbox" class="filled-in" />
+              &lt;span class="caption secondary">Dato&lt;/span>
+            &lt;/label>
+          &lt;/th>
+          &lt;th>&lt;span class="caption secondary">Forhandler&lt;/span>&lt;/th>
+        &lt;/tr>
+      &lt;/thead>
+      &lt;tbody>
+        &lt;tr>
+          &lt;td>
+            &lt;div class="input-field">
+              &lt;label>
+                &lt;input type="checkbox" class="filled-in" />
+                &lt;span class="">21.01.2018&lt;/span>
+              &lt;/label>
+            &lt;/div>
+          &lt;/td>
+          &lt;td>
+            &lt;div class="input-field">
+              &lt;input id="merchant" type="text" class="validate" value="Kiwi">
+              &lt;i class="material-icons icon-in-table">edit&lt;/i>
+            &lt;/div>
+          &lt;/td>
+          
+          &lt;td>
+            &lt;div class="input-field">
+              &lt;select>
+                &lt;option value="" disabled selected>Velg kategori&lt;/option>
+                &lt;option value="1">Bolig&lt;/option>
+                &lt;option value="2">Mat&lt;/option>
+              &lt;/select>
+            &lt;/div>
+          &lt;/td>
+        &lt;/tr>
+      &lt;/tbody>
+    &lt;/table>
+    </ngx-prism>
+    <!-- /Highlighted code -->
   </div>
-  <!-- /Left col -->
+  <!-- /Col -->
 </div>
 <!-- /Row -->
