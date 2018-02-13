@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var M: any;
+declare var spirit: any;
 
 @Component({
   selector: 'app-misc',
@@ -11,6 +11,12 @@ export class MiscComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    /* const animation = 'http://markusmorland.no/test/nettbudsjett/nettbudsjett.json'; */
+    const animation = './assets/nettbudsjett.json';
+    spirit.setup().then(() => spirit.load(animation)).then(groups => {
+        groups.get('Logo-wrapper').construct().yoyo(true).repeat(0).resume()
+        groups.get('NB-Logo', 'Logo-wrapper').construct().yoyo(true).repeat(0).resume()
+    });
   }
 
 }

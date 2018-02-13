@@ -210,7 +210,7 @@ $eco-bar-border-on-dark-bg: $white;
 // Collapsible
 // ==========================================================================
 .collapsible {
-  .icon-collapsible {
+  .icon-collapsible-rotate {
     padding: 0;
   }
   &.popout {
@@ -222,7 +222,7 @@ $eco-bar-border-on-dark-bg: $white;
       margin: 40px -24px;
       box-shadow: 0 -2px 16px 0 rgba(0, 0, 0, 0.16),
         0 8px 16px 0 rgba(0, 0, 0, 0.12);
-      .icon-rotate {
+      .icon-collapsible-rotate {
         transform: rotate(-180deg);
       }
     }
@@ -246,6 +246,12 @@ $eco-bar-border-on-dark-bg: $white;
   padding: 16px 32px 56px 32px;
 }
 
+@media #{$medium-and-down} {
+  table.responsive-table th {
+    height: 64px;
+  }
+}
+    
 
 // Costum Column Sizes
 // ==========================================================================

@@ -1,0 +1,65 @@
+.logo {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* background: gray; */
+}
+
+.logo svg {
+  /* opacity: 0; */
+  width: auto;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.arrow-line {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: transparent;
+}
+
+.arrow-line-inside {
+  stroke: #fff;
+  stroke-width: 9px;
+}
+
+.arrow-line-outside {
+  stroke: #254f65;
+  stroke-width: 24px;
+}
+
+.arrow-head {
+  fill: #fff;
+}
+
+.bar {
+  stroke-width: 21px;
+}
+
+.bar-1 {
+  stroke: #f4db5e;
+}
+
+.bar-2 {
+  stroke: #59c0f4;
+}
+
+.bar-3 {
+  stroke: #f0786e;
+}
+
+.bar-4 {
+  stroke: #5ac1ac;
+}
+
+.base-circle {
+  stroke: #fff;
+  stroke-width: 7px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: transparent;
+}
+
+#Nettbudsjett {
+  fill: #fff;
+}
