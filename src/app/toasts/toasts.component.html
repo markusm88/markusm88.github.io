@@ -1,0 +1,136 @@
+<div class="row z-depth-5 sg-display-row">
+
+  <div class="col m7 sg-row-title">
+    <h1 class="uppercase flow-text">Toasts</h1>
+    <hr>
+  </div>
+  <!-- /Title head -->
+  <div class="col s12 m6">
+    <!-- Toasts for dev:
+    <div id="toast-container">
+      <div class="toast">Toast</div>
+      <div class="toast">Toast w/btn <button class="btn-flat">Angre</button></div>
+
+      <div class="toast toast-on-dark">Toast on dark</div>
+      <div class="toast toast-on-dark">Toast on dark w/btn <button class="btn-flat white-text">Angre</button></div>
+
+      <div class="toast toast-with-icon"><div class="icon-container green"><i class="material-icons">done</i></div>Toast success w/btn <button class="btn-flat">Angre</button></div>
+      <div class="toast toast-with-icon"><div class="icon-container red"><i class="material-icons">priority_high</i></div>Toast error</div>
+      <div class="toast toast-with-icon"><div class="icon-container yellow"><i class="material-icons">priority_high</i></div>Toast warning</div>
+    </div> -->
+
+    <div class="toast">Toast</div>
+    <!-- Highlighted code -->
+    <ngx-prism language="html">
+      &lt;div class="toast">Toast&lt;/div>
+    </ngx-prism>
+    <!-- End highlighted code -->
+
+
+    <div class="toast">Toast w/btn
+      <button class="btn-flat">Angre</button>
+    </div>
+    <!-- Highlighted code: Toast w/btn -->
+    <ngx-prism language="html">
+      &lt;div class="toast">Toast w/btn &lt;button class="btn-flat">Angre&lt;/button>&lt;/div>
+    </ngx-prism>
+    <!-- End highlighted code -->
+
+
+    <div class="toast toast-on-dark">Toast on dark</div>
+    <!-- Highlighted code: Toast on dark -->
+    <ngx-prism language="html">
+      &lt;div class="toast toast-on-dark">Toast on dark&lt;/div>
+    </ngx-prism>
+    <!-- End highlighted code -->
+
+
+    <div class="toast toast-on-dark">Toast on dark w/btn
+      <button class="btn-flat white-text">Angre</button>
+    </div>
+    <!-- Highlighted code: Toast on dark w/btn -->
+    <ngx-prism language="html">
+      &lt;div class="toast toast-on-dark">Toast on dark w/btn &lt;button class="btn-flat white-text">Angre&lt;/button>&lt;/div>
+    </ngx-prism>
+    <!-- End highlighted code -->
+
+
+    <div class="toast toast-with-icon">
+      <div class="icon-container green">
+        <i class="material-icons">done</i>
+      </div>Toast success w/btn
+      <button class="btn-flat">Angre</button>
+    </div>
+    <!-- Highlighted code: Toast success w/btn -->
+    <ngx-prism language="html">
+      &lt;div class="toast toast-with-icon">&lt;div class="icon-container green">&lt;i class="material-icons">done&lt;/i>&lt;/div>Toast
+      success w/btn &lt;button class="btn-flat">Angre&lt;/button>&lt;/div>
+    </ngx-prism>
+    <!-- End highlighted code -->
+
+
+    <div class="toast toast-with-icon">
+      <div class="icon-container red">
+        <i class="material-icons">priority_high</i>
+      </div>Toast error</div>
+
+
+    <!-- Highlighted code: Toast error -->
+    <ngx-prism language="html">
+      &lt;div class="toast toast-with-icon">&lt;div class="icon-container red">&lt;i class="material-icons">priority_high&lt;/i>&lt;/div>Toast
+      error&lt;/div>
+    </ngx-prism>
+    <!-- End highlighted code -->
+
+
+    <div class="toast toast-with-icon">
+      <div class="icon-container yellow">
+        <i class="material-icons">priority_high</i>
+      </div>Toast warning</div>
+    <!-- Highlighted code: Toast warning -->
+    <ngx-prism language="html">
+      &lt;div class="toast toast-with-icon">&lt;div class="icon-container yellow">&lt;i class="material-icons">priority_high&lt;/i>&lt;/div>Toast
+      warning&lt;/div>
+    </ngx-prism>
+    <!-- End highlighted code -->
+
+  </div>
+  <!-- /Left col -->
+
+  <div class="col s12 m6 dark-blue">
+<!-- Highlighted code -->
+<ngx-prism language="javascript">Example:
+
+toastSuccess()&#123;
+  let toastHTML = '&lt;div class="icon-container green">&lt;i class="material-icons">done&lt;/i>&lt;/div>Toast
+  success w/btn &lt;button class="btn-flat">Angre&lt;/button>';
+
+  M.toast(&#123;html: toastHTML, classes: 'toast-with-icon'});
+}
+
+/* OBS:
+Add toast-type-class in M.toast function:
+toast-on-dark
+toast-with-icon
+
+(plain toast class is on by default)
+*/
+</ngx-prism>
+<!-- /Highlighted code -->
+
+    <div class="divider"></div>
+    <p class="white-text">Try toasts:</p>
+    <div class="btn green" (click)="toastSuccess()">Toast Success</div>
+
+    <div class="btn yellow" (click)="toastWarning()">Toast Warning</div>
+
+    <div class="btn red" (click)="toastError()">Toast Error</div>
+
+    <div class="btn white" (click)="toastPlain()">Toast plain</div>
+
+    <div class="btn dark-blue" (click)="toastDark()">Toast dark</div>
+  </div>
+  <!-- /Right col -->
+
+</div>
+<!-- /Row -->

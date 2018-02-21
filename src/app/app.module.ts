@@ -11,6 +11,8 @@ import { TableComponent } from './table/table.component';
 import { BarsComponent } from './bars/bars.component';
 import { ModalsComponent } from './modals/modals.component';
 import { CollapsibleComponent } from './collapsible/collapsible.component';
+import { ToastsComponent } from './toasts/toasts.component';
+import { LoadersComponent } from './loaders/loaders.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { CollapsibleComponent } from './collapsible/collapsible.component';
     TableComponent,
     BarsComponent,
     ModalsComponent,
-    CollapsibleComponent
+    CollapsibleComponent,
+    ToastsComponent,
+    LoadersComponent
   ],
   imports: [
     BrowserModule,

@@ -73,9 +73,11 @@
 
 .btn-flat {
   height: 100%;
-  padding: 8px 0 0;
-  border-bottom: 1px solid #fff;
+  padding: 0 0 0;
+  margin: 0 0.5rem;
+  border-bottom: 1px solid $black-38;
   border-radius: 0;
+  line-height: 1.4rem;
 
   h1,
   h2,
@@ -93,8 +95,21 @@
     }
   }
 
+  &.red-text {
+    border-color: $error-color;
+  }
+
+  &.green-text {
+    border-color: $success-color;
+  }
+
+  &.white-text {
+    border-color: $white;
+  }
+
   &:hover {
-    border-color: $link-color;
+    border-bottom: 2px solid $white;
+    box-shadow: 0px 2px 0px 0px $black-87;
   }
 }
 

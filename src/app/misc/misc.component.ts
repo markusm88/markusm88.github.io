@@ -11,7 +11,10 @@ export class MiscComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    /* const animation = 'http://markusmorland.no/test/nettbudsjett/nettbudsjett.json'; */
+    /* 
+    TODO: Create logo anim i Haiku 
+    Rember to delete dependences: nettbudsjett.json and code inside angluar-cli.json
+    */
     const animation = './assets/nettbudsjett.json';
     spirit.setup().then(() => spirit.load(animation)).then(groups => {
         groups.get('Logo-wrapper').construct().yoyo(true).repeat(0).resume()
