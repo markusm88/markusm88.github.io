@@ -137,20 +137,22 @@
   @extend .icon-container;
   background-color: transparent;
   color: $white;
-  border: 1px dashed $white;
+  border: 1.5px dashed $white;
   &:hover {
     background-color: transparent;
     border-style: solid;
   }
 }
+
+.icon-container-dotted-dark {
+  @extend .icon-container-dotted;
+  color: $black-87;
+  border-color: $black-87;
+}
+
 .icon-container-border {
   @extend .icon-container;
   border: 1px solid $white;
-}
-
-.icon-container-border-dark {
-  @extend .icon-container;
-  border: 1px solid $primary-color;
 }
 
 // Category picker button

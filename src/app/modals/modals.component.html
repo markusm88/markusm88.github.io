@@ -1,23 +1,18 @@
 <div class="row z-depth-5 sg-display-row" style="background: white;">
 
   <div class="col m7 sg-row-title">
-    <h1 class="uppercase flow-text">Modals</h1>
+    <h1 class="uppercase flow-text">Modals and components</h1>
     <hr>
   </div>
   <!-- /Title head -->
-
   <div class="col s12">
-
-
-
+    <h2 id="add-expense">Legg til utgift</h2>
     <div class="card-modal">
       <div class="card-header">
         <div class="card-modal-header-nav-bar">
           <h3 class="subheader white-text">Legg til utgift</h3>
         </div>
         <!-- /nav-bar -->
-
-
         <div class="card-modal-header-category-picker">
           <span class="caption secondary-white">Velg kategori</span>
 
@@ -32,7 +27,6 @@
             </div>
           </div>
           <!-- /cat-picker-mobile -->
-
           <div class="row hide-on-small-only">
             <div class="col c7">
               <div class="btn-category btn-category-active">
@@ -123,7 +117,7 @@
       <div class="card-content row">
         <form class="col s12">
           <div class="row">
-            <div class="input-field col s12 m6">                
+            <div class="input-field col s12 m6">
               <i class="material-icons prefix">monetization_on</i>
               <input id="modal_amount" type="text" class="validate">
               <label for="modal_amount">Beløp</label>
@@ -166,9 +160,47 @@
 
     </div>
     <!-- Card Model -->
+    <br>
+    <div class="divider"></div>
+
+    <h2 id="reccouring-expense">Faste utgifter / Inntekt</h2>
+    <div class="row">
+
+      <div class="col s4">
+        <!-- Card Add -->
+        <div class="card-edit-budget">
+          <div class="icon-container-dotted border-green">
+            <i class="material-icons">add</i>
+          </div>
+          <span class="subhead white-text block">Legg til utgift</span>
+        </div>
+        <!-- /Card Add -->
+      </div>
+
+      <div class="col s4">
+        <!-- Card Add -->
+        <div class="card-edit-budget">
+          <span class="subhead white-text">Lønn</span>
+          <div class="icon-and-text">
+            <span class="body secondary-white"><i class="material-icons">account_circle</i>Petter</span>
+          </div>
+          <!-- <span class="headline white-text">KR 60.000</span> -->
+
+          <form class="form-on-dark-bg">
+          <div class="input-field">
+            <input id="merchant" type="text" class="border-green validate" value="Kiwi">
+          </div>
+          </form>
 
 
 
+          <span class="body secondary-white">KR 2.000 / dag</span>
+        </div>
+        <!-- /Card Add -->
+      </div>
+
+      <div class="col s4"></div>
+    </div>
 
   </div>
   <!-- /Left col -->
