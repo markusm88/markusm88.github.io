@@ -385,3 +385,213 @@ width: percentage(1/7); padding: 0 24px;
     left: 0;
   }
 }
+
+// Logo loader
+// ==========================================================================
+.logo-nb {
+  position: relative;
+  
+}
+
+.logo-nb svg {
+  
+}
+
+.logo-nb {
+  .arrow-line-inside {
+    stroke: #254F65;
+  }
+  .arrow-line-outside {
+    stroke: #ffffff;
+  }
+  .arrow-head {
+    fill: #254F65;
+  }
+  .nb-cirle-first {
+    stroke: #254F65;
+  }
+  
+}
+
+.logo-nb-on-dark {
+  .arrow-line-inside {
+    stroke: #ffffff;
+  }
+  .arrow-line-outside {
+    stroke: #254F65;
+  }
+  .arrow-head {
+    fill: #ffffff;
+  }
+  .nb-cirle-first {
+    stroke: #ffffff;
+  }
+}
+
+.arrow-line {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: transparent;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation-name: arrowLine;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+@keyframes arrowLine {to { stroke-dashoffset: 0;}}
+
+
+.arrow-line-inside {
+  stroke-width: 9px;
+}
+
+.arrow-line-outside {
+  stroke-width: 24px;
+}
+
+/* ARROW HEAD */
+.arrow-head {
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: center;
+  animation: arrowHeadScale 0.3s 0.55s ease-in-out forwards;
+}
+
+@keyframes arrowHeadScale {
+  80%  { transform: scale(1); }   
+  100% { transform: scale(1); opacity: 1 } 
+}
+
+
+/* BARS */
+.bar {
+  stroke-width: 21px;
+  stroke-dasharray: 80;
+  stroke-dashoffset: 79;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-duration: 0.4s;
+}
+
+.bar-1 {
+  stroke: #F4DB5E;
+  animation-name: bar1yellow;
+  animation-delay: 0.8s;
+}
+
+.bar-2 {
+  stroke: #59C0F4;
+  animation-name: bar2blue;
+  animation-delay: 1s;
+}
+
+.bar-3 {
+  stroke: #F0786E;
+  animation-name: bar3red;
+  animation-delay: 1.1s;
+}
+
+.bar-4 {
+  stroke: #5AC1AC;
+  animation-name: bar4green;
+  animation-delay: 1.2s;
+}
+
+@keyframes bar1yellow {to {stroke-dashoffset: 38;}}
+@keyframes bar2blue   {to {stroke-dashoffset: 14;}}
+@keyframes bar3red    {to {stroke-dashoffset: 14;}}
+@keyframes bar4green  {to {stroke-dashoffset: 0;}}
+
+
+/* Shared style for all circles */
+.nb-circle {
+  stroke-width: 7px;
+  stroke-dasharray: 361;
+  stroke-dashoffset: 361;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: transparent;
+  visibility: hidden;
+  
+}
+
+/* First Circle */
+.nb-cirle-first {
+  animation-name: CircleFirst;
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation-iteration-count: 1;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes CircleFirst {to {stroke-dashoffset: 0; visibility: visible;}}
+
+/* Only spinner when svg is wrapped in logo-loader */
+.logo-loader {
+  /* Circle Loaders spinner after first circle load */
+  .nb-circle-spinners {
+    animation-duration: 5s;
+    animation-delay: 1.8s;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+
+  .nb-cirle-yellow {
+    stroke: #F4DB5E;
+    animation-name: CircleYellow;
+  }
+
+  .nb-cirle-red {
+    stroke: #F0786E;
+    animation-name: CircleRed;
+    
+  }
+  .nb-cirle-light-blue {
+    stroke: #59C0F4;
+    animation-name: CircleLightBlue;
+    
+  }
+  .nb-cirle-green {
+    stroke: #5AC1AC;
+    animation-name: CircleGreen;
+  }
+
+  @keyframes  CircleLightBlue {
+    0%    {stroke-dashoffset: 361; visibility: visible;}
+    20%   {stroke-dashoffset: 0;}
+    40%   {stroke-dashoffset: -361; visibility: hidden;}
+    60%   {stroke-dashoffset: -361;}
+    80%   {stroke-dashoffset: -361; }
+    100%  {stroke-dashoffset: 361;}
+  }
+
+  @keyframes CircleYellow {
+    0%    {stroke-dashoffset: 361; visibility: visible;}
+    20%   {stroke-dashoffset: 0;}
+    40%   {stroke-dashoffset: 0;}
+    60%   {stroke-dashoffset: -361; visibility: hidden;}
+    80%   {stroke-dashoffset: -361;}
+    100%  {stroke-dashoffset: -361;}
+  }
+
+  @keyframes CircleGreen {
+    0%    {stroke-dashoffset: 361; visibility: visible;}
+    20%   {stroke-dashoffset: 0;}
+    40%   {stroke-dashoffset: 0;}
+    60%   {stroke-dashoffset: 0;}
+    80%   {stroke-dashoffset: -361; visibility: hidden;}
+    100%  {stroke-dashoffset: -361;}
+  }
+
+  @keyframes CircleRed {
+    0%    {stroke-dashoffset: 361; visibility: visible;}
+    20%   {stroke-dashoffset: 0;}
+    40%   {stroke-dashoffset: 0;}
+    60%   {stroke-dashoffset: 0;}
+    80%   {stroke-dashoffset: 0;}
+    100%   {stroke-dashoffset: -361; visibility: hidden; }
+  }
+}
