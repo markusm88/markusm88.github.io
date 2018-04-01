@@ -435,8 +435,9 @@ width: percentage(1/7); padding: 0 24px;
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
   animation-name: arrowLine;
-  animation-duration: 1s;
+  animation-duration: 1000ms;
   animation-fill-mode: forwards;
+  animation-delay: 0ms;
   animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
@@ -456,7 +457,7 @@ width: percentage(1/7); padding: 0 24px;
   transform: scale(0);
   opacity: 0;
   transform-origin: center;
-  animation: arrowHeadScale 0.3s 0.55s ease-in-out forwards;
+  animation: arrowHeadScale 300ms 550ms ease-in-out forwards;
 }
 
 @keyframes arrowHeadScale {
@@ -472,31 +473,31 @@ width: percentage(1/7); padding: 0 24px;
   stroke-dashoffset: 79;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  animation-duration: 0.4s;
+  animation-duration: 400ms;
 }
 
 .bar-1 {
   stroke: #F4DB5E;
   animation-name: bar1yellow;
-  animation-delay: 0.8s;
+  animation-delay: 800ms;
 }
 
 .bar-2 {
   stroke: #59C0F4;
   animation-name: bar2blue;
-  animation-delay: 1s;
+  animation-delay: 1000ms;
 }
 
 .bar-3 {
   stroke: #F0786E;
   animation-name: bar3red;
-  animation-delay: 1.1s;
+  animation-delay: 1100ms;
 }
 
 .bar-4 {
   stroke: #5AC1AC;
   animation-name: bar4green;
-  animation-delay: 1.2s;
+  animation-delay: 1200ms;
 }
 
 @keyframes bar1yellow {to {stroke-dashoffset: 38;}}
@@ -523,26 +524,26 @@ width: percentage(1/7); padding: 0 24px;
 
 // Styling Logo Animated Once
 .logo-nb .nb-circle {
-    animation-duration: 0.75s;
+    animation-duration: 750ms;
     animation-iteration-count: 1;
 }
 .logo-nb .nb-circle-first {
     animation-name: CircleOnce;
-    animation-delay: 0.5s;
+    animation-delay: 500ms;
 }
 @keyframes CircleOnce { to {stroke-dashoffset: 1444;} }
 
 
 // Style for Logo Animated for loading
 .logo-loader .nb-circle {
-    animation-duration: 4s;
+    animation-duration: 4000ms;
     animation-iteration-count: infinite;
 }
 
 /* First Circle */
 .logo-loader .nb-circle-first {
     animation-name: CircleFirst;
-    animation-delay: 0.5s;
+    animation-delay: 500ms;
 }
 @keyframes CircleFirst {
   0%   {stroke: #254F65;}
@@ -556,7 +557,7 @@ width: percentage(1/7); padding: 0 24px;
 /* First Circle On Dark BG */
 .logo-nb-on-dark .nb-circle-first {
   animation-name: CircleFirstOnDark;
-  animation-delay: 0.5s;
+  animation-delay: 500ms;
 }
 @keyframes CircleFirstOnDark {
   0%   {stroke: #FFF;}
@@ -571,7 +572,7 @@ width: percentage(1/7); padding: 0 24px;
 .logo-loader .nb-circle-second {
   stroke: #F4DB5E;
   animation-name: CircleSecond;
-  animation-delay: 1.5s;
+  animation-delay: 1500ms;
 }
 @keyframes CircleSecond {
   0%   {stroke: #F4DB5E;} 
