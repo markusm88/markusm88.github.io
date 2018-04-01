@@ -402,12 +402,12 @@ width: percentage(1/7); padding: 0 24px;
     stroke: #254F65;
   }
   .arrow-line-outside {
-    stroke: #ffffff;
+    stroke: #FFF;
   }
   .arrow-head {
     fill: #254F65;
   }
-  .nb-cirle-first {
+  .nb-cirlce-first {
     stroke: #254F65;
   }
   
@@ -415,16 +415,16 @@ width: percentage(1/7); padding: 0 24px;
 
 .logo-nb-on-dark {
   .arrow-line-inside {
-    stroke: #ffffff;
+    stroke: #FFF;
   }
   .arrow-line-outside {
     stroke: #254F65;
   }
   .arrow-head {
-    fill: #ffffff;
+    fill: #FFF;
   }
-  .nb-cirle-first {
-    stroke: #ffffff;
+  .nb-cirlce-first {
+    stroke: #FFF;
   }
 }
 
@@ -505,93 +505,79 @@ width: percentage(1/7); padding: 0 24px;
 @keyframes bar4green  {to {stroke-dashoffset: 0;}}
 
 
-/* Shared style for all circles */
+/**********/
+/* CIRLCE */
+/**********/
+
+// Shared style for all circles
 .nb-circle {
-  stroke-width: 7px;
-  stroke-dasharray: 361;
-  stroke-dashoffset: 361;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: transparent;
-  visibility: hidden;
-  
+    fill: transparent;
+    stroke-width: 7px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 361;
+    stroke-dashoffset: 1805;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    animation-fill-mode: forwards;
+}
+
+// Styling Logo Animated Once
+.logo-nb .nb-circle {
+    animation-duration: 0.75s;
+    animation-iteration-count: 1;
+}
+.logo-nb .nb-circle-first {
+    animation-name: CircleOnce;
+    animation-delay: 0.5s;
+}
+@keyframes CircleOnce { to {stroke-dashoffset: 1444;} }
+
+
+// Style for Logo Animated for loading
+.logo-loader .nb-circle {
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
 /* First Circle */
-.nb-cirle-first {
-  animation-name: CircleFirst;
-  animation-duration: 1.2s;
-  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  animation-iteration-count: 1;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
+.logo-loader .nb-circle-first {
+    animation-name: CircleFirst;
+    animation-delay: 0.5s;
 }
-@keyframes CircleFirst {to {stroke-dashoffset: 0; visibility: visible;}}
+@keyframes CircleFirst {
+  0%   {stroke: #254F65;}
+  25%  {stroke-dashoffset: 1444;}
+  50%  {stroke-dashoffset: 1083; stroke: #254F65;}
+  51%  {stroke: #59C0F4;}
+  75%  {stroke-dashoffset: 722;}
+  100% {stroke-dashoffset: 361; stroke: #59C0F4;}
+}
 
-/* Only spinner when svg is wrapped in logo-loader */
-.logo-loader {
-  /* Circle Loaders spinner after first circle load */
-  .nb-circle-spinners {
-    animation-duration: 5s;
-    animation-delay: 1.8s;
-    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-  }
+/* First Circle On Dark BG */
+.logo-nb-on-dark .nb-circle-first {
+  animation-name: CircleFirstOnDark;
+  animation-delay: 0.5s;
+}
+@keyframes CircleFirstOnDark {
+  0%   {stroke: #FFF;}
+  25%  {stroke-dashoffset: 1444;}
+  50%  {stroke-dashoffset: 1083; stroke: #FFF;}
+  51%  {stroke: #59C0F4;}
+  75%  {stroke-dashoffset: 722;}
+  100% {stroke-dashoffset: 361; stroke: #59C0F4;}
+}
 
-  .nb-cirle-yellow {
-    stroke: #F4DB5E;
-    animation-name: CircleYellow;
-  }
-
-  .nb-cirle-red {
-    stroke: #F0786E;
-    animation-name: CircleRed;
-    
-  }
-  .nb-cirle-light-blue {
-    stroke: #59C0F4;
-    animation-name: CircleLightBlue;
-    
-  }
-  .nb-cirle-green {
-    stroke: #5AC1AC;
-    animation-name: CircleGreen;
-  }
-
-  @keyframes  CircleLightBlue {
-    0%    {stroke-dashoffset: 361; visibility: visible;}
-    20%   {stroke-dashoffset: 0;}
-    40%   {stroke-dashoffset: -361; visibility: hidden;}
-    60%   {stroke-dashoffset: -361;}
-    80%   {stroke-dashoffset: -361; }
-    100%  {stroke-dashoffset: 361;}
-  }
-
-  @keyframes CircleYellow {
-    0%    {stroke-dashoffset: 361; visibility: visible;}
-    20%   {stroke-dashoffset: 0;}
-    40%   {stroke-dashoffset: 0;}
-    60%   {stroke-dashoffset: -361; visibility: hidden;}
-    80%   {stroke-dashoffset: -361;}
-    100%  {stroke-dashoffset: -361;}
-  }
-
-  @keyframes CircleGreen {
-    0%    {stroke-dashoffset: 361; visibility: visible;}
-    20%   {stroke-dashoffset: 0;}
-    40%   {stroke-dashoffset: 0;}
-    60%   {stroke-dashoffset: 0;}
-    80%   {stroke-dashoffset: -361; visibility: hidden;}
-    100%  {stroke-dashoffset: -361;}
-  }
-
-  @keyframes CircleRed {
-    0%    {stroke-dashoffset: 361; visibility: visible;}
-    20%   {stroke-dashoffset: 0;}
-    40%   {stroke-dashoffset: 0;}
-    60%   {stroke-dashoffset: 0;}
-    80%   {stroke-dashoffset: 0;}
-    100%   {stroke-dashoffset: -361; visibility: hidden; }
-  }
+/* Second Circle */
+.logo-loader .nb-circle-second {
+  stroke: #F4DB5E;
+  animation-name: CircleSecond;
+  animation-delay: 1.5s;
+}
+@keyframes CircleSecond {
+  0%   {stroke: #F4DB5E;} 
+  25%  {stroke-dashoffset: 1444;}
+  50%  {stroke-dashoffset: 1083; stroke: #F4DB5E;}
+  51%  {stroke: #F0786E;}
+  75%  {stroke-dashoffset: 722;}
+  100% {stroke-dashoffset: 361; stroke: #F0786E;}
 }
